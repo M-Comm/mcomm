@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>اتصالات متنقلة</title>
+<title>اتصالات متنقلة | M-Comm</title>
 
 <style>
 
@@ -171,6 +171,8 @@ body{
 
     border-top:1px solid #ddd;
 
+    line-height:2;
+
 }
 
 /* FOOTER */
@@ -219,8 +221,6 @@ footer{
 
 <div class="content" id="practical">
 
-<!-- Multiple Access -->
-
 <div class="sub-card">
 
 <button onclick="toggleSub('p1')">
@@ -229,13 +229,11 @@ Multiple Access
 
 <div class="sub-content" id="p1">
 
-تقنيات تستخدم لمشاركة القناة بين عدة مستخدمين في أنظمة الاتصالات.
+تقنيات تستخدم لمشاركة القناة بين عدة مستخدمين.
 
 </div>
 
 </div>
-
-<!-- FDMA -->
 
 <div class="sub-card">
 
@@ -245,13 +243,11 @@ FDMA
 
 <div class="sub-content" id="p2">
 
-تقنية تقسيم التردد بحيث يحصل كل مستخدم على تردد مختلف.
+تقنية تقسيم التردد بين المستخدمين.
 
 </div>
 
 </div>
-
-<!-- TDMA -->
 
 <div class="sub-card">
 
@@ -261,13 +257,11 @@ TDMA
 
 <div class="sub-content" id="p3">
 
-تقنية تعتمد على تقسيم الزمن بين المستخدمين.
+تقنية تعتمد على تقسيم الزمن.
 
 </div>
 
 </div>
-
-<!-- CDMA -->
 
 <div class="sub-card">
 
@@ -277,13 +271,11 @@ CDMA
 
 <div class="sub-content" id="p4">
 
-تقنية تعتمد على أكواد مميزة لكل مستخدم.
+تقنية تعتمد على الأكواد الرقمية.
 
 </div>
 
 </div>
-
-<!-- Walsh Codes -->
 
 <div class="sub-card">
 
@@ -293,13 +285,11 @@ Walsh Codes
 
 <div class="sub-content" id="p5">
 
-أكواد تستخدم لتقليل التداخل في أنظمة CDMA.
+أكواد تستخدم في CDMA لتقليل التداخل.
 
 </div>
 
 </div>
-
-<!-- Quiz -->
 
 <div class="sub-card">
 
@@ -309,7 +299,7 @@ Quiz Questions
 
 <div class="sub-content" id="p6">
 
-أسئلة تدريبية خاصة بالمادة العملية.
+أسئلة تدريبية للمختبر العملي.
 
 </div>
 
@@ -339,7 +329,11 @@ Quiz Questions
 
 <div class="sub-content" id="t1">
 
-Mobile Radio Propagation
+<p>Mobile Radio Propagation</p>
+
+<p>
+دراسة كيفية انتقال الموجات في أنظمة الاتصالات المتنقلة.
+</p>
 
 </div>
 
@@ -355,7 +349,11 @@ Mobile Radio Propagation
 
 <div class="sub-content" id="t2">
 
-Free Space Path Loss
+<p>Free Space Path Loss</p>
+
+<p>
+فقدان قدرة الإشارة أثناء انتقالها في الفضاء الحر.
+</p>
 
 </div>
 
@@ -371,6 +369,10 @@ Free Space Path Loss
 
 <div class="sub-content" id="t3">
 
+<p>
+Propagation Mechanisms
+</p>
+
 <!-- Reflection -->
 
 <div class="sub-card">
@@ -381,7 +383,14 @@ Free Space Path Loss
 
 <div class="sub-content" id="t31">
 
+<p>
 Reflection & Brewster Angle
+</p>
+
+<p>
+يحدث الانعكاس عند اصطدام الموجة بسطح عاكس،
+وزاوية بروستر تقلل شدة الانعكاس.
+</p>
 
 </div>
 
@@ -397,7 +406,14 @@ Reflection & Brewster Angle
 
 <div class="sub-content" id="t32">
 
+<p>
 Diffraction & Fresnel Zones
+</p>
+
+<p>
+الانعطاف يسمح بانتشار الموجة حول العوائق،
+ومناطق فرينل تحدد جودة الإشارة.
+</p>
 
 </div>
 
@@ -413,7 +429,13 @@ Diffraction & Fresnel Zones
 
 <div class="sub-content" id="t33">
 
+<p>
 Scattering & Rayleigh Criterion
+</p>
+
+<p>
+يحدث التشتت عند اصطدام الموجات بأجسام صغيرة.
+</p>
 
 </div>
 
@@ -433,7 +455,11 @@ Scattering & Rayleigh Criterion
 
 <div class="sub-content" id="t4">
 
-Two-Ray Ground Model
+<p>Two-Ray Ground Model</p>
+
+<p>
+يعتمد على الموجة المباشرة والموجة المنعكسة من الأرض.
+</p>
 
 </div>
 
@@ -457,7 +483,11 @@ Two-Ray Ground Model
 
 <div class="sub-content" id="t51">
 
-FDMA
+<p>FDMA</p>
+
+<p>
+تقسيم القناة إلى ترددات مختلفة.
+</p>
 
 </div>
 
@@ -471,7 +501,11 @@ FDMA
 
 <div class="sub-content" id="t52">
 
-TDMA
+<p>TDMA</p>
+
+<p>
+تقسيم القناة إلى فترات زمنية.
+</p>
 
 </div>
 
@@ -485,7 +519,11 @@ TDMA
 
 <div class="sub-content" id="t53">
 
-CDMA
+<p>CDMA</p>
+
+<p>
+استخدام أكواد رقمية لتمييز المستخدمين.
+</p>
 
 </div>
 
@@ -513,7 +551,7 @@ CDMA
 
 <div class="sub-content" id="t61">
 
-MCQs
+MCQs Questions
 
 </div>
 
@@ -561,7 +599,7 @@ Solved Numerical Problems
 
 <footer>
 
-© M-Comm | Mobile Communications
+© 2025 M-Comm | Mobile Communications
 
 </footer>
 
