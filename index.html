@@ -1,4 +1,206 @@
-/* حركة المحتوى */
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>اتصالات متنقلة | M-Comm</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Tahoma;
+
+    background:#eef3f9;
+
+    color:#222;
+
+}
+
+/* ================= HEADER ================= */
+
+.hero{
+
+    height:300px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+    text-shadow:0 0 10px rgba(0,0,0,0.7);
+
+}
+
+.hero p{
+
+    font-size:24px;
+
+    background:rgba(255,255,255,0.12);
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(5px);
+
+}
+
+/* ================= MAIN ================= */
+
+.container{
+
+    width:92%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:40px 0;
+
+}
+
+/* ================= TITLE ================= */
+
+.main-title{
+
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:35px;
+
+    color:#0b5ed7;
+
+}
+
+/* ================= CARD ================= */
+
+.card{
+
+    background:white;
+
+    margin-bottom:22px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    border:1px solid #dde6f2;
+
+    transition:0.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ================= BUTTON ================= */
+
+.card button,
+.sub-card button{
+
+    width:100%;
+
+    border:none;
+
+    padding:22px;
+
+    background:white;
+
+    text-align:right;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    position:relative;
+
+}
+
+.card button:hover,
+.sub-card button:hover{
+
+    background:#edf5ff;
+
+    color:#0077ff;
+
+}
+
+/* ================= PLUS ICON ================= */
+
+.card button::before,
+.sub-card button::before{
+
+    content:"+";
+
+    position:absolute;
+
+    left:20px;
+
+    font-size:28px;
+
+    transition:0.3s;
+
+}
+
+.card button.active::before,
+.sub-card button.active::before{
+
+    transform:rotate(45deg);
+
+    color:#0b5ed7;
+
+}
+
+/* ================= CONTENT ================= */
 
 .content,
 .sub-content{
@@ -14,16 +216,18 @@
     opacity 0.4s ease,
     padding 0.4s ease;
 
-    padding:0 18px;
+    padding:0 20px;
+
+    background:#fafcff;
 
 }
 
-/* عند الفتح */
+/* ================= SHOW ================= */
 
 .content.show,
 .sub-content.show{
 
-    max-height:1000px;
+    max-height:1200px;
 
     opacity:1;
 
@@ -31,39 +235,523 @@
 
 }
 
-/* حركة الزر */
+/* ================= SUB CARD ================= */
 
-.card button,
-.sub-card button{
+.sub-card{
 
-    position:relative;
+    background:white;
 
-}
+    margin-top:15px;
 
-/* سهم متحرك */
+    border-radius:14px;
 
-.card button::before,
-.sub-card button::before{
+    overflow:hidden;
 
-    content:"+";
-
-    position:absolute;
-
-    left:20px;
-
-    font-size:24px;
-
-    transition:0.3s;
+    border:1px solid #dde6f2;
 
 }
 
-/* تدوير السهم */
+/* ================= PARAGRAPH ================= */
 
-.card button.active::before,
-.sub-card button.active::before{
+p{
 
-    transform:rotate(45deg);
+    line-height:2;
 
-    color:#0b5ed7;
+    color:#444;
 
 }
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#111827;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:40px;
+
+    font-size:17px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<h1>اتصالات متنقلة</h1>
+
+<p>Mobile Communications</p>
+
+</section>
+
+<!-- ================= MAIN ================= -->
+
+<div class="container">
+
+<h2 class="main-title">
+المحتويات الدراسية
+</h2>
+
+<!-- ================= العملي ================= -->
+
+<div class="card">
+
+<button onclick="toggleContent(event,'practical')">
+📘 العملي
+</button>
+
+<div class="content" id="practical">
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'p1')">
+Multiple Access
+</button>
+
+<div class="sub-content" id="p1">
+
+<p>
+تقنيات تستخدم لمشاركة القناة بين عدة مستخدمين.
+</p>
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'p2')">
+FDMA
+</button>
+
+<div class="sub-content" id="p2">
+
+<p>
+تقنية تقسيم التردد بين المستخدمين.
+</p>
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'p3')">
+TDMA
+</button>
+
+<div class="sub-content" id="p3">
+
+<p>
+تقنية تعتمد على تقسيم الزمن.
+</p>
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'p4')">
+CDMA
+</button>
+
+<div class="sub-content" id="p4">
+
+<p>
+تقنية تعتمد على الأكواد الرقمية.
+</p>
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'p5')">
+Walsh Codes
+</button>
+
+<div class="sub-content" id="p5">
+
+<p>
+أكواد تستخدم في CDMA لتقليل التداخل.
+</p>
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'p6')">
+Quiz Questions
+</button>
+
+<div class="sub-content" id="p6">
+
+<p>
+أسئلة تدريبية للمختبر العملي.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= النظري ================= -->
+
+<div class="card">
+
+<button onclick="toggleContent(event,'theory')">
+📖 النظري
+</button>
+
+<div class="content" id="theory">
+
+<!-- 1 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t1')">
+1. أساسيات انتشار الموجات
+</button>
+
+<div class="sub-content" id="t1">
+
+<p>
+Mobile Radio Propagation
+</p>
+
+<p>
+دراسة كيفية انتقال الموجات في أنظمة الاتصالات المتنقلة.
+</p>
+
+</div>
+
+</div>
+
+<!-- 2 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t2')">
+2. فقدان المسار في الفضاء الحر
+</button>
+
+<div class="sub-content" id="t2">
+
+<p>
+Free Space Path Loss
+</p>
+
+<p>
+فقدان قدرة الإشارة أثناء انتقالها في الفضاء الحر.
+</p>
+
+</div>
+
+</div>
+
+<!-- 3 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t3')">
+3. آليات الانتشار الأساسية
+</button>
+
+<div class="sub-content" id="t3">
+
+<p>
+Propagation Mechanisms
+</p>
+
+<!-- Reflection -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t31')">
+الانعكاس وزاوية بروستر
+</button>
+
+<div class="sub-content" id="t31">
+
+<p>
+Reflection & Brewster Angle
+</p>
+
+<p>
+يحدث الانعكاس عند اصطدام الموجة بسطح عاكس،
+وزاوية بروستر تقلل شدة الانعكاس.
+</p>
+
+</div>
+
+</div>
+
+<!-- Diffraction -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t32')">
+الانعطاف ومنطقة فرينل
+</button>
+
+<div class="sub-content" id="t32">
+
+<p>
+Diffraction & Fresnel Zones
+</p>
+
+<p>
+الانعطاف يسمح بانتشار الموجة حول العوائق،
+ومناطق فرينل تحدد جودة الإشارة.
+</p>
+
+</div>
+
+</div>
+
+<!-- Scattering -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t33')">
+التشتت ومعيار رايلي
+</button>
+
+<div class="sub-content" id="t33">
+
+<p>
+Scattering & Rayleigh Criterion
+</p>
+
+<p>
+يحدث التشتت عند اصطدام الموجات بأجسام صغيرة.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- 4 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t4')">
+4. نموذج الانعكاس الأرضي
+</button>
+
+<div class="sub-content" id="t4">
+
+<p>
+Two-Ray Ground Model
+</p>
+
+<p>
+يعتمد على الموجة المباشرة والموجة المنعكسة من الأرض.
+</p>
+
+</div>
+
+</div>
+
+<!-- 5 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t5')">
+5. تقنيات الوصول المتعدد
+</button>
+
+<div class="sub-content" id="t5">
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t51')">
+نظام الوصول بالتردد
+</button>
+
+<div class="sub-content" id="t51">
+
+<p>
+FDMA
+</p>
+
+<p>
+تقسيم القناة إلى ترددات مختلفة.
+</p>
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t52')">
+نظام الوصول بالزمن
+</button>
+
+<div class="sub-content" id="t52">
+
+<p>
+TDMA
+</p>
+
+<p>
+تقسيم القناة إلى فترات زمنية.
+</p>
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t53')">
+نظام الوصول بالكود
+</button>
+
+<div class="sub-content" id="t53">
+
+<p>
+CDMA
+</p>
+
+<p>
+استخدام أكواد رقمية لتمييز المستخدمين.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- 6 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t6')">
+6. بنك الأسئلة والتدريبات
+</button>
+
+<div class="sub-content" id="t6">
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t61')">
+اختبار الخيارات المتعددة
+</button>
+
+<div class="sub-content" id="t61">
+
+<p>
+MCQs Questions
+</p>
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t62')">
+تحدي صح أو خطأ
+</button>
+
+<div class="sub-content" id="t62">
+
+<p>
+True / False Questions
+</p>
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub(event,'t63')">
+مسائل حسابية محلولة
+</button>
+
+<div class="sub-content" id="t63">
+
+<p>
+Solved Numerical Problems
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+© 2025 M-Comm | Mobile Communications
+
+</footer>
+
+<script>
+
+function toggleContent(event,id){
+
+let content = document.getElementById(id);
+
+let button = event.currentTarget;
+
+content.classList.toggle("show");
+
+button.classList.toggle("active");
+
+}
+
+function toggleSub(event,id){
+
+let content = document.getElementById(id);
+
+let button = event.currentTarget;
+
+content.classList.toggle("show");
+
+button.classList.toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
