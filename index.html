@@ -1,297 +1,171 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<body>
 
-body{
+<!-- TOP BAR -->
 
-    font-family:Tahoma;
+<header class="topbar">
 
-    background:#f4f7fb;
+<div class="logo">
+📡 M-Comm
+</div>
 
-    color:#222;
+<div class="top-links">
 
-}
+<a href="#">الرئيسية</a>
+<a href="#">النظري</a>
+<a href="#">العملي</a>
+<a href="#">الاختبارات</a>
 
-/* ================= NAVBAR ================= */
+</div>
 
-nav{
+</header>
 
-    position:fixed;
+<!-- HERO -->
 
-    top:0;
+<section class="hero">
 
-    width:100%;
+<div class="overlay">
 
-    padding:16px 8%;
+<h1>اتصالات متنقلة</h1>
 
-    background:rgba(8,15,30,0.75);
+<p>
+منصة تعليمية لمادة Mobile Communications
+</p>
 
-    backdrop-filter:blur(12px);
+</div>
 
-    display:flex;
+</section>
 
-    justify-content:space-between;
+<!-- MAIN -->
 
-    align-items:center;
+<div class="container">
 
-    z-index:999;
+<h2 class="main-title">
+الأقسام الرئيسية
+</h2>
 
-}
+<div class="grid">
 
-.logo{
+<!-- العملي -->
 
-    color:white;
+<div class="main-card">
 
-    font-size:28px;
+<h3>📘 العملي</h3>
 
-    font-weight:bold;
+<p>
+مختبرات وتقنيات الاتصال العملي
+</p>
 
-}
+<button onclick="toggleContent('practical')">
+فتح القسم
+</button>
 
-.menu a{
+<div class="content" id="practical">
 
-    color:white;
+<div class="item">Multiple Access</div>
+<div class="item">FDMA</div>
+<div class="item">TDMA</div>
+<div class="item">CDMA</div>
+<div class="item">Walsh Codes</div>
+<div class="item">Quiz Questions</div>
 
-    text-decoration:none;
+</div>
 
-    margin-right:18px;
+</div>
 
-    font-size:17px;
+<!-- النظري -->
 
-    transition:0.3s;
+<div class="main-card">
 
-}
+<h3>📖 النظري</h3>
 
-.menu a:hover{
+<p>
+شرح كامل لمفاهيم الاتصالات المتنقلة
+</p>
 
-    color:#00c6ff;
+<button onclick="toggleContent('theory')">
+فتح القسم
+</button>
 
-}
+<div class="content" id="theory">
 
-/* ================= HERO ================= */
+<div class="item">
+أساسيات انتشار الموجات
+</div>
 
-.hero{
+<div class="item">
+فقدان المسار في الفضاء الحر
+</div>
 
-    height:300px;
+<div class="item">
+آليات الانتشار الأساسية
+</div>
 
-    background:
-    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
-    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop');
+<div class="subitem">
+• Reflection & Brewster Angle
+</div>
 
-    background-size:cover;
+<div class="subitem">
+• Diffraction & Fresnel Zones
+</div>
 
-    background-position:center;
+<div class="subitem">
+• Scattering & Rayleigh Criterion
+</div>
 
-    display:flex;
+<div class="item">
+تقنيات الوصول المتعدد
+</div>
 
-    justify-content:center;
+<div class="subitem">
+• FDMA
+</div>
 
-    align-items:center;
+<div class="subitem">
+• TDMA
+</div>
 
-    flex-direction:column;
+<div class="subitem">
+• CDMA
+</div>
 
-    text-align:center;
+<div class="item">
+بنك الأسئلة والتدريبات
+</div>
 
-    color:white;
+</div>
 
-    padding-top:60px;
+</div>
 
-}
+</div>
 
-.hero h1{
+</div>
 
-    font-size:55px;
+<!-- FOOTER -->
 
-    margin-bottom:12px;
+<footer>
 
-    text-shadow:0 0 15px rgba(0,0,0,0.7);
+© 2025 M-Comm
 
-}
+</footer>
 
-.hero p{
+<script>
 
-    font-size:22px;
+function toggleContent(id){
 
-    background:rgba(255,255,255,0.12);
+let content = document.getElementById(id);
 
-    padding:10px 22px;
+if(content.style.display === "block"){
 
-    border-radius:30px;
+content.style.display = "none";
 
-    backdrop-filter:blur(5px);
+}else{
 
-}
-
-/* ================= CONTAINER ================= */
-
-.container{
-
-    width:92%;
-
-    max-width:1100px;
-
-    margin:auto;
-
-    padding:45px 0;
-
-}
-
-/* ================= TITLE ================= */
-
-.section-title{
-
-    text-align:center;
-
-    font-size:38px;
-
-    margin-bottom:35px;
-
-    color:#0b5ed7;
-
-}
-
-/* ================= MAIN CARD ================= */
-
-.card{
-
-    background:white;
-
-    margin-bottom:22px;
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-
-    transition:0.3s;
-
-    border:1px solid #e6ecf5;
+content.style.display = "block";
 
 }
 
-.card:hover{
-
-    transform:translateY(-4px);
-
 }
 
-/* ================= BUTTON ================= */
+</script>
 
-.card button{
-
-    width:100%;
-
-    border:none;
-
-    padding:22px;
-
-    background:white;
-
-    text-align:right;
-
-    font-size:22px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:0.3s;
-
-    color:#1d3557;
-
-}
-
-.card button:hover{
-
-    background:#edf5ff;
-
-    color:#0077ff;
-
-}
-
-/* ================= CONTENT ================= */
-
-.content{
-
-    display:none;
-
-    padding:22px;
-
-    background:#fafcff;
-
-    border-top:1px solid #dbe5f1;
-
-    line-height:2;
-
-}
-
-/* ================= SUB CARD ================= */
-
-.sub-card{
-
-    background:white;
-
-    margin-top:15px;
-
-    border-radius:14px;
-
-    overflow:hidden;
-
-    border:1px solid #dde6f2;
-
-}
-
-.sub-card button{
-
-    background:#f8fbff;
-
-    font-size:18px;
-
-    padding:18px;
-
-    color:#234;
-
-}
-
-.sub-card button:hover{
-
-    background:#e9f3ff;
-
-}
-
-/* ================= SUB CONTENT ================= */
-
-.sub-content{
-
-    display:none;
-
-    padding:18px;
-
-    background:white;
-
-    border-top:1px solid #dbe5f1;
-
-    line-height:2;
-
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-
-    background:#0f172a;
-
-    color:white;
-
-    text-align:center;
-
-    padding:25px;
-
-    margin-top:40px;
-
-    font-size:17px;
-
-}
+</body>
