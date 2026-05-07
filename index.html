@@ -1,150 +1,640 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>اتصالات متنقلة | M-Comm</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Tahoma;
+    background:#eef3f9;
+    color:#222;
+}
+
+/* ================= HEADER ================= */
+
+.hero{
+
+    height:450px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    margin-bottom:15px;
+
+    text-shadow:0 0 15px rgba(0,0,0,0.7);
+
+    letter-spacing:2px;
+
+}
+
+.hero p{
+
+    font-size:24px;
+
+    background:rgba(255,255,255,0.12);
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(6px);
+
+}
+
+/* ================= MAIN ================= */
+
+.container{
+
+    width:92%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:40px 0;
+
+}
+
+/* ================= MAIN CARDS ================= */
+
+.card{
+
+    background:white;
+
+    margin-bottom:20px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.08);
+
+}
+
+/* ================= BUTTON ================= */
+
+.card button{
+
+    width:100%;
+
+    border:none;
+
+    padding:22px;
+
+    background:white;
+
+    text-align:right;
+
+    font-size:23px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+.card button:hover{
+
+    background:#edf4ff;
+
+    color:#0b5ed7;
+
+}
+
+/* ================= CONTENT ================= */
+
+.content{
+
+    display:none;
+
+    padding:25px;
+
+    line-height:2.2;
+
+    background:#fafafa;
+
+    border-top:1px solid #ddd;
+
+}
+
+/* ================= SUB CARDS ================= */
+
+.sub-card{
+
+    background:white;
+
+    margin-top:15px;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    border:1px solid #ddd;
+
+}
+
+.sub-card button{
+
+    background:#f8fbff;
+
+    font-size:18px;
+
+    padding:18px;
+
+}
+
+/* ================= SUB CONTENT ================= */
+
+.sub-content{
+
+    display:none;
+
+    padding:18px;
+
+    background:white;
+
+    border-top:1px solid #ddd;
+
+    line-height:2;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#111827;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:40px;
+
+}
+
+</style>
+
+</head>
+
 <body>
 
-<!-- TOP BAR -->
-
-<header class="topbar">
-
-<div class="logo">
-📡 M-Comm
-</div>
-
-<div class="top-links">
-
-<a href="#">الرئيسية</a>
-<a href="#">النظري</a>
-<a href="#">العملي</a>
-<a href="#">الاختبارات</a>
-
-</div>
-
-</header>
-
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
-<div class="overlay">
-
 <h1>اتصالات متنقلة</h1>
 
-<p>
-منصة تعليمية لمادة Mobile Communications
-</p>
-
-</div>
+<p>Mobile Communications</p>
 
 </section>
 
-<!-- MAIN -->
+<!-- ================= CONTENT ================= -->
 
 <div class="container">
 
-<h2 class="main-title">
-الأقسام الرئيسية
-</h2>
+<!-- ================= العملي ================= -->
 
-<div class="grid">
-
-<!-- العملي -->
-
-<div class="main-card">
-
-<h3>📘 العملي</h3>
-
-<p>
-مختبرات وتقنيات الاتصال العملي
-</p>
+<div class="card">
 
 <button onclick="toggleContent('practical')">
-فتح القسم
+📘 العملي
 </button>
 
 <div class="content" id="practical">
 
-<div class="item">Multiple Access</div>
-<div class="item">FDMA</div>
-<div class="item">TDMA</div>
-<div class="item">CDMA</div>
-<div class="item">Walsh Codes</div>
-<div class="item">Quiz Questions</div>
+<!-- Multiple Access -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('p1')">
+Multiple Access
+</button>
+
+<div class="sub-content" id="p1">
+
+تقنيات تستخدم لمشاركة القناة بين عدة مستخدمين.
 
 </div>
 
 </div>
 
-<!-- النظري -->
+<!-- FDMA -->
 
-<div class="main-card">
+<div class="sub-card">
 
-<h3>📖 النظري</h3>
+<button onclick="toggleSub('p2')">
+FDMA
+</button>
 
-<p>
-شرح كامل لمفاهيم الاتصالات المتنقلة
-</p>
+<div class="sub-content" id="p2">
+
+تقنية تقسيم التردد بين المستخدمين.
+
+</div>
+
+</div>
+
+<!-- TDMA -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('p3')">
+TDMA
+</button>
+
+<div class="sub-content" id="p3">
+
+تقنية تعتمد على تقسيم الزمن.
+
+</div>
+
+</div>
+
+<!-- CDMA -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('p4')">
+CDMA
+</button>
+
+<div class="sub-content" id="p4">
+
+تقنية تعتمد على الأكواد الرقمية.
+
+</div>
+
+</div>
+
+<!-- Walsh Codes -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('p5')">
+Walsh Codes
+</button>
+
+<div class="sub-content" id="p5">
+
+أكواد تستخدم في CDMA لتقليل التداخل.
+
+</div>
+
+</div>
+
+<!-- Quiz -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('p6')">
+Quiz Questions
+</button>
+
+<div class="sub-content" id="p6">
+
+أسئلة تدريبية للمختبر العملي.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= النظري ================= -->
+
+<div class="card">
 
 <button onclick="toggleContent('theory')">
-فتح القسم
+📖 النظري
 </button>
 
 <div class="content" id="theory">
 
-<div class="item">
-أساسيات انتشار الموجات
-</div>
+<!-- 1 -->
 
-<div class="item">
-فقدان المسار في الفضاء الحر
-</div>
+<div class="sub-card">
 
-<div class="item">
-آليات الانتشار الأساسية
-</div>
+<button onclick="toggleSub('t1')">
+1. أساسيات انتشار الموجات
+</button>
 
-<div class="subitem">
-• Reflection & Brewster Angle
-</div>
+<div class="sub-content" id="t1">
 
-<div class="subitem">
-• Diffraction & Fresnel Zones
-</div>
+<p>Mobile Radio Propagation</p>
 
-<div class="subitem">
-• Scattering & Rayleigh Criterion
-</div>
-
-<div class="item">
-تقنيات الوصول المتعدد
-</div>
-
-<div class="subitem">
-• FDMA
-</div>
-
-<div class="subitem">
-• TDMA
-</div>
-
-<div class="subitem">
-• CDMA
-</div>
-
-<div class="item">
-بنك الأسئلة والتدريبات
-</div>
+<p>
+دراسة كيفية انتقال الموجات في أنظمة الاتصالات المتنقلة.
+</p>
 
 </div>
 
 </div>
 
+<!-- 2 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t2')">
+2. فقدان المسار في الفضاء الحر
+</button>
+
+<div class="sub-content" id="t2">
+
+<p>Free Space Path Loss</p>
+
+<p>
+فقدان قدرة الإشارة أثناء انتقالها في الفضاء الحر.
+</p>
+
+</div>
+
+</div>
+
+<!-- 3 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t3')">
+3. آليات الانتشار الأساسية
+</button>
+
+<div class="sub-content" id="t3">
+
+<p>
+Propagation Mechanisms
+</p>
+
+<!-- Reflection -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t31')">
+الانعكاس وزاوية بروستر
+</button>
+
+<div class="sub-content" id="t31">
+
+<p>
+Reflection & Brewster Angle
+</p>
+
+<p>
+يحدث الانعكاس عند اصطدام الموجة بسطح عاكس،
+وزاوية بروستر تقلل شدة الانعكاس.
+</p>
+
+</div>
+
+</div>
+
+<!-- Diffraction -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t32')">
+الانعطاف ومنطقة فرينل
+</button>
+
+<div class="sub-content" id="t32">
+
+<p>
+Diffraction & Fresnel Zones
+</p>
+
+<p>
+الانعطاف يسمح بانتشار الموجة حول العوائق،
+ومناطق فرينل تحدد جودة الإشارة.
+</p>
+
+</div>
+
+</div>
+
+<!-- Scattering -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t33')">
+التشتت ومعيار رايلي
+</button>
+
+<div class="sub-content" id="t33">
+
+<p>
+Scattering & Rayleigh Criterion
+</p>
+
+<p>
+يحدث التشتت عند اصطدام الموجات بأجسام صغيرة.
+</p>
+
+</div>
+
 </div>
 
 </div>
 
-<!-- FOOTER -->
+</div>
+
+<!-- 4 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t4')">
+4. نموذج الانعكاس الأرضي
+</button>
+
+<div class="sub-content" id="t4">
+
+<p>Two-Ray Ground Model</p>
+
+<p>
+يعتمد على الموجة المباشرة والموجة المنعكسة من الأرض.
+</p>
+
+</div>
+
+</div>
+
+<!-- 5 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t5')">
+5. تقنيات الوصول المتعدد
+</button>
+
+<div class="sub-content" id="t5">
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t51')">
+نظام الوصول بالتردد
+</button>
+
+<div class="sub-content" id="t51">
+
+<p>FDMA</p>
+
+<p>
+تقسيم القناة إلى ترددات مختلفة.
+</p>
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t52')">
+نظام الوصول بالزمن
+</button>
+
+<div class="sub-content" id="t52">
+
+<p>TDMA</p>
+
+<p>
+تقسيم القناة إلى فترات زمنية.
+</p>
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t53')">
+نظام الوصول بالكود
+</button>
+
+<div class="sub-content" id="t53">
+
+<p>CDMA</p>
+
+<p>
+استخدام أكواد رقمية لتمييز المستخدمين.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- 6 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t6')">
+6. بنك الأسئلة والتدريبات
+</button>
+
+<div class="sub-content" id="t6">
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t61')">
+اختبار الخيارات المتعددة
+</button>
+
+<div class="sub-content" id="t61">
+
+MCQs Questions
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t62')">
+تحدي صح أو خطأ
+</button>
+
+<div class="sub-content" id="t62">
+
+True / False Questions
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t63')">
+مسائل حسابية محلولة
+</button>
+
+<div class="sub-content" id="t63">
+
+Solved Numerical Problems
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-© 2025 M-Comm
+© 2025 M-Comm | Mobile Communications
 
 </footer>
 
@@ -166,6 +656,23 @@ content.style.display = "block";
 
 }
 
+function toggleSub(id){
+
+let content = document.getElementById(id);
+
+if(content.style.display === "block"){
+
+content.style.display = "none";
+
+}else{
+
+content.style.display = "block";
+
+}
+
+}
+
 </script>
 
 </body>
+</html>
