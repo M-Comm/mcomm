@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>M-Comm</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Tahoma;
+    background:#f4f6f9;
+}
+
+/* Header */
+
+header{
+    background:#0b5ed7;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:35px;
+}
+
+/* Sections */
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:40px 0;
+}
+
+.card{
+    background:white;
+    margin-bottom:20px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card button{
+    width:100%;
+    padding:20px;
+    border:none;
+    background:#ffffff;
+    text-align:right;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card button:hover{
+    background:#e9f1ff;
+}
+
+.content{
+    display:none;
+    padding:20px;
+    border-top:1px solid #ddd;
+    line-height:2;
+    font-size:18px;
+}
+
+/* Footer */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>اتصالات متنقلة</h1>
+
+<p>Mobile Communications</p>
+
+</header>
+
+<div class="container">
+
+<!-- Multiple Access -->
+
+<div class="card">
+<button onclick="toggleContent('c1')">
+Multiple Access
+</button>
+
+<div class="content" id="c1">
+
+تقنيات تستخدم لمشاركة القناة بين عدة مستخدمين في أنظمة الاتصالات.
+
+</div>
+</div>
+
+<!-- FDMA -->
+
+<div class="card">
+<button onclick="toggleContent('c2')">
+FDMA
+</button>
+
+<div class="content" id="c2">
+
+تقنية تقسيم التردد حيث يحصل كل مستخدم على تردد مختلف.
+
+</div>
+</div>
+
+<!-- TDMA -->
+
+<div class="card">
+<button onclick="toggleContent('c3')">
+TDMA
+</button>
+
+<div class="content" id="c3">
+
+تقنية تقسيم الزمن حيث يتم تخصيص وقت محدد لكل مستخدم.
+
+</div>
+</div>
+
+<!-- CDMA -->
+
+<div class="card">
+<button onclick="toggleContent('c4')">
+CDMA
+</button>
+
+<div class="content" id="c4">
+
+تقنية تعتمد على أكواد خاصة لكل مستخدم لإرسال البيانات.
+
+</div>
+</div>
+
+<!-- Walsh Codes -->
+
+<div class="card">
+<button onclick="toggleContent('c5')">
+Walsh Codes
+</button>
+
+<div class="content" id="c5">
+
+أكواد تستخدم في CDMA لفصل الإشارات وتقليل التداخل.
+
+</div>
+</div>
+
+<!-- Quiz Questions -->
+
+<div class="card">
+<button onclick="toggleContent('c6')">
+Quiz Questions
+</button>
+
+<div class="content" id="c6">
+
+هنا ستتم إضافة أسئلة اختبار خاصة بالمادة.
+
+</div>
+</div>
+
+</div>
+
+<footer>
+
+© M-Comm
+
+</footer>
+
+<script>
+
+function toggleContent(id){
+
+let content = document.getElementById(id);
+
+if(content.style.display === "block"){
+    content.style.display = "none";
+}else{
+    content.style.display = "block";
+}
+
+}
+
+</script>
+
+</body>
+</html>
