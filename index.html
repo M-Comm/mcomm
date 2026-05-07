@@ -1,643 +1,69 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+/* حركة المحتوى */
 
-<head>
+.content,
+.sub-content{
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>اتصالات متنقلة | M-Comm</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Tahoma;
-    background:#eef3f9;
-    color:#222;
-}
-
-/* HEADER */
-
-.hero{
-
-    height:420px;
-
-    background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-
-    text-align:center;
-
-    color:white;
-}
-
-.hero h1{
-
-    font-size:60px;
-
-    margin-bottom:15px;
-
-}
-
-.hero p{
-
-    font-size:24px;
-
-}
-
-/* MAIN */
-
-.container{
-
-    width:92%;
-
-    max-width:1100px;
-
-    margin:auto;
-
-    padding:40px 0;
-
-}
-
-/* CARD */
-
-.card{
-
-    background:white;
-
-    margin-bottom:20px;
-
-    border-radius:20px;
+    max-height:0;
 
     overflow:hidden;
 
-    box-shadow:0 0 15px rgba(0,0,0,0.08);
+    opacity:0;
+
+    transition:
+    max-height 0.5s ease,
+    opacity 0.4s ease,
+    padding 0.4s ease;
+
+    padding:0 18px;
 
 }
 
-/* BUTTON */
+/* عند الفتح */
 
-.card button{
+.content.show,
+.sub-content.show{
 
-    width:100%;
+    max-height:1000px;
 
-    border:none;
+    opacity:1;
 
-    padding:22px;
+    padding:20px;
 
-    background:white;
+}
 
-    text-align:right;
+/* حركة الزر */
 
-    font-size:23px;
+.card button,
+.sub-card button{
 
-    font-weight:bold;
+    position:relative;
 
-    cursor:pointer;
+}
+
+/* سهم متحرك */
+
+.card button::before,
+.sub-card button::before{
+
+    content:"+";
+
+    position:absolute;
+
+    left:20px;
+
+    font-size:24px;
 
     transition:0.3s;
 
 }
 
-.card button:hover{
+/* تدوير السهم */
 
-    background:#edf4ff;
+.card button.active::before,
+.sub-card button.active::before{
+
+    transform:rotate(45deg);
 
     color:#0b5ed7;
 
 }
-
-/* CONTENT */
-
-.content{
-
-    display:none;
-
-    padding:25px;
-
-    line-height:2.2;
-
-    background:#fafafa;
-
-    border-top:1px solid #ddd;
-
-}
-
-.sub-card{
-
-    background:white;
-
-    margin-top:15px;
-
-    border-radius:12px;
-
-    overflow:hidden;
-
-    border:1px solid #ddd;
-
-}
-
-.sub-card button{
-
-    background:#f8fbff;
-
-    font-size:18px;
-
-    padding:18px;
-
-}
-
-.sub-content{
-
-    display:none;
-
-    padding:18px;
-
-    background:white;
-
-    border-top:1px solid #ddd;
-
-    line-height:2;
-
-}
-
-/* FOOTER */
-
-footer{
-
-    background:#111827;
-
-    color:white;
-
-    text-align:center;
-
-    padding:25px;
-
-    margin-top:40px;
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<!-- HEADER -->
-
-<section class="hero">
-
-<h1>اتصالات متنقلة</h1>
-
-<p>Mobile Communications</p>
-
-</section>
-
-<!-- CONTENT -->
-
-<div class="container">
-
-<!-- العملي -->
-
-<div class="card">
-
-<button onclick="toggleContent('practical')">
-📘 العملي
-</button>
-
-<div class="content" id="practical">
-
-<div class="sub-card">
-
-<button onclick="toggleSub('p1')">
-Multiple Access
-</button>
-
-<div class="sub-content" id="p1">
-
-تقنيات تستخدم لمشاركة القناة بين عدة مستخدمين.
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('p2')">
-FDMA
-</button>
-
-<div class="sub-content" id="p2">
-
-تقنية تقسيم التردد بين المستخدمين.
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('p3')">
-TDMA
-</button>
-
-<div class="sub-content" id="p3">
-
-تقنية تعتمد على تقسيم الزمن.
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('p4')">
-CDMA
-</button>
-
-<div class="sub-content" id="p4">
-
-تقنية تعتمد على الأكواد الرقمية.
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('p5')">
-Walsh Codes
-</button>
-
-<div class="sub-content" id="p5">
-
-أكواد تستخدم في CDMA لتقليل التداخل.
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('p6')">
-Quiz Questions
-</button>
-
-<div class="sub-content" id="p6">
-
-أسئلة تدريبية للمختبر العملي.
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- النظري -->
-
-<div class="card">
-
-<button onclick="toggleContent('theory')">
-📖 النظري
-</button>
-
-<div class="content" id="theory">
-
-<!-- 1 -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t1')">
-1. أساسيات انتشار الموجات
-</button>
-
-<div class="sub-content" id="t1">
-
-<p>Mobile Radio Propagation</p>
-
-<p>
-دراسة كيفية انتقال الموجات في أنظمة الاتصالات المتنقلة.
-</p>
-
-</div>
-
-</div>
-
-<!-- 2 -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t2')">
-2. فقدان المسار في الفضاء الحر
-</button>
-
-<div class="sub-content" id="t2">
-
-<p>Free Space Path Loss</p>
-
-<p>
-فقدان قدرة الإشارة أثناء انتقالها في الفضاء الحر.
-</p>
-
-</div>
-
-</div>
-
-<!-- 3 -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t3')">
-3. آليات الانتشار الأساسية
-</button>
-
-<div class="sub-content" id="t3">
-
-<p>
-Propagation Mechanisms
-</p>
-
-<!-- Reflection -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t31')">
-الانعكاس وزاوية بروستر
-</button>
-
-<div class="sub-content" id="t31">
-
-<p>
-Reflection & Brewster Angle
-</p>
-
-<p>
-يحدث الانعكاس عند اصطدام الموجة بسطح عاكس،
-وزاوية بروستر تقلل شدة الانعكاس.
-</p>
-
-</div>
-
-</div>
-
-<!-- Diffraction -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t32')">
-الانعطاف ومنطقة فرينل
-</button>
-
-<div class="sub-content" id="t32">
-
-<p>
-Diffraction & Fresnel Zones
-</p>
-
-<p>
-الانعطاف يسمح بانتشار الموجة حول العوائق،
-ومناطق فرينل تحدد جودة الإشارة.
-</p>
-
-</div>
-
-</div>
-
-<!-- Scattering -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t33')">
-التشتت ومعيار رايلي
-</button>
-
-<div class="sub-content" id="t33">
-
-<p>
-Scattering & Rayleigh Criterion
-</p>
-
-<p>
-يحدث التشتت عند اصطدام الموجات بأجسام صغيرة.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- 4 -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t4')">
-4. نموذج الانعكاس الأرضي
-</button>
-
-<div class="sub-content" id="t4">
-
-<p>Two-Ray Ground Model</p>
-
-<p>
-يعتمد على الموجة المباشرة والموجة المنعكسة من الأرض.
-</p>
-
-</div>
-
-</div>
-
-<!-- 5 -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t5')">
-5. تقنيات الوصول المتعدد
-</button>
-
-<div class="sub-content" id="t5">
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t51')">
-نظام الوصول بالتردد
-</button>
-
-<div class="sub-content" id="t51">
-
-<p>FDMA</p>
-
-<p>
-تقسيم القناة إلى ترددات مختلفة.
-</p>
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t52')">
-نظام الوصول بالزمن
-</button>
-
-<div class="sub-content" id="t52">
-
-<p>TDMA</p>
-
-<p>
-تقسيم القناة إلى فترات زمنية.
-</p>
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t53')">
-نظام الوصول بالكود
-</button>
-
-<div class="sub-content" id="t53">
-
-<p>CDMA</p>
-
-<p>
-استخدام أكواد رقمية لتمييز المستخدمين.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- 6 -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t6')">
-6. بنك الأسئلة والتدريبات
-</button>
-
-<div class="sub-content" id="t6">
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t61')">
-اختبار الخيارات المتعددة
-</button>
-
-<div class="sub-content" id="t61">
-
-MCQs Questions
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t62')">
-تحدي صح أو خطأ
-</button>
-
-<div class="sub-content" id="t62">
-
-True / False Questions
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t63')">
-مسائل حسابية محلولة
-</button>
-
-<div class="sub-content" id="t63">
-
-Solved Numerical Problems
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- FOOTER -->
-
-<footer>
-
-© 2025 M-Comm | Mobile Communications
-
-</footer>
-
-<script>
-
-function toggleContent(id){
-
-let content = document.getElementById(id);
-
-if(content.style.display === "block"){
-
-content.style.display = "none";
-
-}else{
-
-content.style.display = "block";
-
-}
-
-}
-
-function toggleSub(id){
-
-let content = document.getElementById(id);
-
-if(content.style.display === "block"){
-
-content.style.display = "none";
-
-}else{
-
-content.style.display = "block";
-
-}
-
-}
-
-</script>
-
-</body>
-</html>
