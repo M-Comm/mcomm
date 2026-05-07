@@ -16,10 +16,6 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
 
     font-family:Tahoma;
@@ -56,17 +52,13 @@ body{
 
     color:white;
 
-    box-shadow:0 5px 20px rgba(0,0,0,0.2);
-
 }
 
 .hero h1{
 
-    font-size:60px;
+    font-size:58px;
 
     margin-bottom:15px;
-
-    text-shadow:0 0 10px rgba(0,0,0,0.7);
 
 }
 
@@ -79,8 +71,6 @@ body{
     padding:10px 22px;
 
     border-radius:30px;
-
-    backdrop-filter:blur(5px);
 
 }
 
@@ -98,15 +88,13 @@ body{
 
 }
 
-/* ================= TITLE ================= */
-
 .main-title{
 
     text-align:center;
 
-    font-size:38px;
+    font-size:36px;
 
-    margin-bottom:35px;
+    margin-bottom:30px;
 
     color:#0b5ed7;
 
@@ -127,14 +115,6 @@ body{
     box-shadow:0 8px 20px rgba(0,0,0,0.08);
 
     border:1px solid #dde6f2;
-
-    transition:0.3s;
-
-}
-
-.card:hover{
-
-    transform:translateY(-4px);
 
 }
 
@@ -222,8 +202,6 @@ body{
 
 }
 
-/* ================= SHOW ================= */
-
 .content.show,
 .sub-content.show{
 
@@ -251,7 +229,7 @@ body{
 
 }
 
-/* ================= PARAGRAPH ================= */
+/* ================= TEXT ================= */
 
 p{
 
@@ -275,8 +253,6 @@ footer{
 
     margin-top:40px;
 
-    font-size:17px;
-
 }
 
 </style>
@@ -285,7 +261,7 @@ footer{
 
 <body>
 
-<!-- ================= HERO ================= -->
+<!-- HEADER -->
 
 <section class="hero">
 
@@ -295,7 +271,7 @@ footer{
 
 </section>
 
-<!-- ================= MAIN ================= -->
+<!-- MAIN -->
 
 <div class="container">
 
@@ -303,7 +279,7 @@ footer{
 المحتويات الدراسية
 </h2>
 
-<!-- ================= العملي ================= -->
+<!-- العملي -->
 
 <div class="card">
 
@@ -413,7 +389,7 @@ Quiz Questions
 
 </div>
 
-<!-- ================= النظري ================= -->
+<!-- النظري -->
 
 <div class="card">
 
@@ -422,8 +398,6 @@ Quiz Questions
 </button>
 
 <div class="content" id="theory">
-
-<!-- 1 -->
 
 <div class="sub-card">
 
@@ -445,8 +419,6 @@ Mobile Radio Propagation
 
 </div>
 
-<!-- 2 -->
-
 <div class="sub-card">
 
 <button onclick="toggleSub(event,'t2')">
@@ -467,8 +439,6 @@ Free Space Path Loss
 
 </div>
 
-<!-- 3 -->
-
 <div class="sub-card">
 
 <button onclick="toggleSub(event,'t3')">
@@ -480,8 +450,6 @@ Free Space Path Loss
 <p>
 Propagation Mechanisms
 </p>
-
-<!-- Reflection -->
 
 <div class="sub-card">
 
@@ -496,15 +464,12 @@ Reflection & Brewster Angle
 </p>
 
 <p>
-يحدث الانعكاس عند اصطدام الموجة بسطح عاكس،
-وزاوية بروستر تقلل شدة الانعكاس.
+يحدث الانعكاس عند اصطدام الموجة بسطح عاكس.
 </p>
 
 </div>
 
 </div>
-
-<!-- Diffraction -->
 
 <div class="sub-card">
 
@@ -519,15 +484,12 @@ Diffraction & Fresnel Zones
 </p>
 
 <p>
-الانعطاف يسمح بانتشار الموجة حول العوائق،
-ومناطق فرينل تحدد جودة الإشارة.
+الانعطاف يسمح بانتشار الموجات حول العوائق.
 </p>
 
 </div>
 
 </div>
-
-<!-- Scattering -->
 
 <div class="sub-card">
 
@@ -553,171 +515,9 @@ Scattering & Rayleigh Criterion
 
 </div>
 
-<!-- 4 -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub(event,'t4')">
-4. نموذج الانعكاس الأرضي
-</button>
-
-<div class="sub-content" id="t4">
-
-<p>
-Two-Ray Ground Model
-</p>
-
-<p>
-يعتمد على الموجة المباشرة والموجة المنعكسة من الأرض.
-</p>
-
 </div>
 
 </div>
-
-<!-- 5 -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub(event,'t5')">
-5. تقنيات الوصول المتعدد
-</button>
-
-<div class="sub-content" id="t5">
-
-<div class="sub-card">
-
-<button onclick="toggleSub(event,'t51')">
-نظام الوصول بالتردد
-</button>
-
-<div class="sub-content" id="t51">
-
-<p>
-FDMA
-</p>
-
-<p>
-تقسيم القناة إلى ترددات مختلفة.
-</p>
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub(event,'t52')">
-نظام الوصول بالزمن
-</button>
-
-<div class="sub-content" id="t52">
-
-<p>
-TDMA
-</p>
-
-<p>
-تقسيم القناة إلى فترات زمنية.
-</p>
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub(event,'t53')">
-نظام الوصول بالكود
-</button>
-
-<div class="sub-content" id="t53">
-
-<p>
-CDMA
-</p>
-
-<p>
-استخدام أكواد رقمية لتمييز المستخدمين.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- 6 -->
-
-<div class="sub-card">
-
-<button onclick="toggleSub(event,'t6')">
-6. بنك الأسئلة والتدريبات
-</button>
-
-<div class="sub-content" id="t6">
-
-<div class="sub-card">
-
-<button onclick="toggleSub(event,'t61')">
-اختبار الخيارات المتعددة
-</button>
-
-<div class="sub-content" id="t61">
-
-<p>
-MCQs Questions
-</p>
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub(event,'t62')">
-تحدي صح أو خطأ
-</button>
-
-<div class="sub-content" id="t62">
-
-<p>
-True / False Questions
-</p>
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub(event,'t63')">
-مسائل حسابية محلولة
-</button>
-
-<div class="sub-content" id="t63">
-
-<p>
-Solved Numerical Problems
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ================= FOOTER ================= -->
 
 <footer>
 
