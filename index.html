@@ -1,5 +1,3 @@
-انسخ هذا الكود كامل وضعه داخل ملف index.html بدل القديم بالكامل:
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
@@ -8,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>اتصالات متنقلة | M-Comm</title>
+<title>اتصالات متنقلة</title>
 
 <style>
 
@@ -53,19 +51,15 @@ body{
 
     margin-bottom:15px;
 
-    text-shadow:0 0 10px rgba(0,0,0,0.5);
-
 }
 
 .hero p{
 
     font-size:24px;
 
-    opacity:0.9;
-
 }
 
-/* CONTAINER */
+/* MAIN */
 
 .container{
 
@@ -85,13 +79,13 @@ body{
 
     background:white;
 
-    border-radius:20px;
+    margin-bottom:20px;
 
-    margin-bottom:25px;
+    border-radius:20px;
 
     overflow:hidden;
 
-    box-shadow:0 0 20px rgba(0,0,0,0.08);
+    box-shadow:0 0 15px rgba(0,0,0,0.08);
 
 }
 
@@ -109,13 +103,13 @@ body{
 
     text-align:right;
 
-    font-size:24px;
+    font-size:23px;
+
+    font-weight:bold;
 
     cursor:pointer;
 
     transition:0.3s;
-
-    font-weight:bold;
 
 }
 
@@ -135,25 +129,47 @@ body{
 
     padding:25px;
 
-    line-height:2.3;
+    line-height:2.2;
 
     background:#fafafa;
 
     border-top:1px solid #ddd;
 
+}
+
+.sub-card{
+
+    background:white;
+
+    margin-top:15px;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    border:1px solid #ddd;
+
+}
+
+.sub-card button{
+
+    background:#f8fbff;
+
     font-size:18px;
 
-}
-
-.content ul{
-
-    padding-right:20px;
+    padding:18px;
 
 }
 
-.content li{
+.sub-content{
 
-    margin-bottom:10px;
+    display:none;
+
+    padding:18px;
+
+    background:white;
+
+    border-top:1px solid #ddd;
 
 }
 
@@ -171,8 +187,6 @@ footer{
 
     margin-top:40px;
 
-    font-size:18px;
-
 }
 
 </style>
@@ -181,15 +195,13 @@ footer{
 
 <body>
 
-<!-- HERO -->
+<!-- HEADER -->
 
 <section class="hero">
 
 <h1>اتصالات متنقلة</h1>
 
-<p>
-Mobile Communications Project
-</p>
+<p>Mobile Communications</p>
 
 </section>
 
@@ -207,21 +219,101 @@ Mobile Communications Project
 
 <div class="content" id="practical">
 
-<ul>
+<!-- Multiple Access -->
 
-<li><b>Multiple Access</b></li>
+<div class="sub-card">
 
-<li><b>FDMA</b></li>
+<button onclick="toggleSub('p1')">
+Multiple Access
+</button>
 
-<li><b>TDMA</b></li>
+<div class="sub-content" id="p1">
 
-<li><b>CDMA</b></li>
+تقنيات تستخدم لمشاركة القناة بين عدة مستخدمين في أنظمة الاتصالات.
 
-<li><b>Walsh Codes</b></li>
+</div>
 
-<li><b>Quiz Questions</b></li>
+</div>
 
-</ul>
+<!-- FDMA -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('p2')">
+FDMA
+</button>
+
+<div class="sub-content" id="p2">
+
+تقنية تقسيم التردد بحيث يحصل كل مستخدم على تردد مختلف.
+
+</div>
+
+</div>
+
+<!-- TDMA -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('p3')">
+TDMA
+</button>
+
+<div class="sub-content" id="p3">
+
+تقنية تعتمد على تقسيم الزمن بين المستخدمين.
+
+</div>
+
+</div>
+
+<!-- CDMA -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('p4')">
+CDMA
+</button>
+
+<div class="sub-content" id="p4">
+
+تقنية تعتمد على أكواد مميزة لكل مستخدم.
+
+</div>
+
+</div>
+
+<!-- Walsh Codes -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('p5')">
+Walsh Codes
+</button>
+
+<div class="sub-content" id="p5">
+
+أكواد تستخدم لتقليل التداخل في أنظمة CDMA.
+
+</div>
+
+</div>
+
+<!-- Quiz -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('p6')">
+Quiz Questions
+</button>
+
+<div class="sub-content" id="p6">
+
+أسئلة تدريبية خاصة بالمادة العملية.
+
+</div>
+
+</div>
 
 </div>
 
@@ -237,102 +329,227 @@ Mobile Communications Project
 
 <div class="content" id="theory">
 
-<ul>
+<!-- 1 -->
 
-<li>
-<b>أساسيات انتشار الموجات</b><br>
-(Mobile Radio Propagation)
-</li>
+<div class="sub-card">
 
-<li>
-<b>فقدان المسار في الفضاء الحر</b><br>
-(Free Space Path Loss)
-</li>
+<button onclick="toggleSub('t1')">
+1. أساسيات انتشار الموجات
+</button>
 
-<li>
+<div class="sub-content" id="t1">
 
-<b>آليات الانتشار الأساسية</b><br>
-(Propagation Mechanisms)
+Mobile Radio Propagation
 
-<ul>
+</div>
 
-<li>
+</div>
+
+<!-- 2 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t2')">
+2. فقدان المسار في الفضاء الحر
+</button>
+
+<div class="sub-content" id="t2">
+
+Free Space Path Loss
+
+</div>
+
+</div>
+
+<!-- 3 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t3')">
+3. آليات الانتشار الأساسية
+</button>
+
+<div class="sub-content" id="t3">
+
+<!-- Reflection -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t31')">
 الانعكاس وزاوية بروستر
-(Reflection & Brewster Angle)
-</li>
+</button>
 
-<li>
+<div class="sub-content" id="t31">
+
+Reflection & Brewster Angle
+
+</div>
+
+</div>
+
+<!-- Diffraction -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t32')">
 الانعطاف ومنطقة فرينل
-(Diffraction & Fresnel Zones)
-</li>
+</button>
 
-<li>
+<div class="sub-content" id="t32">
+
+Diffraction & Fresnel Zones
+
+</div>
+
+</div>
+
+<!-- Scattering -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t33')">
 التشتت ومعيار رايلي
-(Scattering & Rayleigh Criterion)
-</li>
+</button>
 
-</ul>
+<div class="sub-content" id="t33">
 
-</li>
+Scattering & Rayleigh Criterion
 
-<li>
+</div>
 
-<b>نموذج الانعكاس الأرضي</b><br>
-(Two-Ray Ground Model)
+</div>
 
-</li>
+</div>
 
-<li>
+</div>
 
-<b>تقنيات الوصول المتعدد</b><br>
-(Multiple Access Techniques)
+<!-- 4 -->
 
-<ul>
+<div class="sub-card">
 
-<li>
+<button onclick="toggleSub('t4')">
+4. نموذج الانعكاس الأرضي
+</button>
+
+<div class="sub-content" id="t4">
+
+Two-Ray Ground Model
+
+</div>
+
+</div>
+
+<!-- 5 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t5')">
+5. تقنيات الوصول المتعدد
+</button>
+
+<div class="sub-content" id="t5">
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t51')">
 نظام الوصول بالتردد
-(FDMA)
-</li>
+</button>
 
-<li>
+<div class="sub-content" id="t51">
+
+FDMA
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t52')">
 نظام الوصول بالزمن
-(TDMA)
-</li>
+</button>
 
-<li>
+<div class="sub-content" id="t52">
+
+TDMA
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t53')">
 نظام الوصول بالكود
-(CDMA)
-</li>
+</button>
 
-</ul>
+<div class="sub-content" id="t53">
 
-</li>
+CDMA
 
-<li>
+</div>
 
-<b>بنك الأسئلة والتدريبات</b><br>
-(Question Bank)
+</div>
 
-<ul>
+</div>
 
-<li>
+</div>
+
+<!-- 6 -->
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t6')">
+6. بنك الأسئلة والتدريبات
+</button>
+
+<div class="sub-content" id="t6">
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t61')">
 اختبار الخيارات المتعددة
-(MCQs)
-</li>
+</button>
 
-<li>
+<div class="sub-content" id="t61">
+
+MCQs
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t62')">
 تحدي صح أو خطأ
-</li>
+</button>
 
-<li>
+<div class="sub-content" id="t62">
+
+True / False Questions
+
+</div>
+
+</div>
+
+<div class="sub-card">
+
+<button onclick="toggleSub('t63')">
 مسائل حسابية محلولة
-</li>
+</button>
 
-</ul>
+<div class="sub-content" id="t63">
 
-</li>
+Solved Numerical Problems
 
-</ul>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -344,7 +561,7 @@ Mobile Communications Project
 
 <footer>
 
-© 2025 M-Comm | Mobile Communications
+© M-Comm | Mobile Communications
 
 </footer>
 
@@ -356,11 +573,27 @@ let content = document.getElementById(id);
 
 if(content.style.display === "block"){
 
-    content.style.display = "none";
+content.style.display = "none";
 
 }else{
 
-    content.style.display = "block";
+content.style.display = "block";
+
+}
+
+}
+
+function toggleSub(id){
+
+let content = document.getElementById(id);
+
+if(content.style.display === "block"){
+
+content.style.display = "none";
+
+}else{
+
+content.style.display = "block";
 
 }
 
