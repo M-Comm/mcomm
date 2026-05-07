@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>اتصالات متنقلة | M-Comm</title>
-
-<style>
-
 *{
     margin:0;
     padding:0;
@@ -19,7 +7,9 @@
 body{
 
     font-family:Tahoma;
-    background:#eef3f9;
+
+    background:#f4f7fb;
+
     color:#222;
 
 }
@@ -34,11 +24,11 @@ nav{
 
     width:100%;
 
-    padding:18px 8%;
+    padding:16px 8%;
 
-    background:rgba(0,0,0,0.45);
+    background:rgba(8,15,30,0.75);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
 
     display:flex;
 
@@ -66,9 +56,9 @@ nav{
 
     text-decoration:none;
 
-    margin-right:20px;
+    margin-right:18px;
 
-    font-size:18px;
+    font-size:17px;
 
     transition:0.3s;
 
@@ -84,10 +74,10 @@ nav{
 
 .hero{
 
-    height:100vh;
+    height:300px;
 
     background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
     url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop');
 
     background-size:cover;
@@ -106,63 +96,35 @@ nav{
 
     color:white;
 
-    padding:20px;
+    padding-top:60px;
 
 }
 
 .hero h1{
 
-    font-size:75px;
+    font-size:55px;
 
-    margin-bottom:20px;
+    margin-bottom:12px;
 
-    text-shadow:0 0 20px rgba(0,0,0,0.7);
+    text-shadow:0 0 15px rgba(0,0,0,0.7);
 
 }
 
 .hero p{
 
-    font-size:25px;
+    font-size:22px;
 
-    margin-bottom:30px;
+    background:rgba(255,255,255,0.12);
 
-    background:rgba(255,255,255,0.1);
+    padding:10px 22px;
 
-    padding:12px 25px;
+    border-radius:30px;
 
-    border-radius:40px;
-
-    backdrop-filter:blur(6px);
+    backdrop-filter:blur(5px);
 
 }
 
-.hero button{
-
-    padding:15px 35px;
-
-    border:none;
-
-    border-radius:35px;
-
-    background:#00c6ff;
-
-    color:white;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:0.3s;
-
-}
-
-.hero button:hover{
-
-    background:#0095cc;
-
-}
-
-/* ================= MAIN ================= */
+/* ================= CONTAINER ================= */
 
 .container{
 
@@ -172,7 +134,7 @@ nav{
 
     margin:auto;
 
-    padding:60px 0;
+    padding:45px 0;
 
 }
 
@@ -182,35 +144,37 @@ nav{
 
     text-align:center;
 
-    font-size:40px;
+    font-size:38px;
 
-    margin-bottom:40px;
+    margin-bottom:35px;
 
     color:#0b5ed7;
 
 }
 
-/* ================= CARD ================= */
+/* ================= MAIN CARD ================= */
 
 .card{
 
     background:white;
 
-    margin-bottom:25px;
+    margin-bottom:22px;
 
     border-radius:20px;
 
     overflow:hidden;
 
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
 
     transition:0.3s;
+
+    border:1px solid #e6ecf5;
 
 }
 
 .card:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 
 }
 
@@ -228,7 +192,7 @@ nav{
 
     text-align:right;
 
-    font-size:24px;
+    font-size:22px;
 
     font-weight:bold;
 
@@ -236,13 +200,15 @@ nav{
 
     transition:0.3s;
 
+    color:#1d3557;
+
 }
 
 .card button:hover{
 
-    background:#edf4ff;
+    background:#edf5ff;
 
-    color:#0b5ed7;
+    color:#0077ff;
 
 }
 
@@ -252,13 +218,13 @@ nav{
 
     display:none;
 
-    padding:25px;
+    padding:22px;
 
-    background:#fafafa;
+    background:#fafcff;
 
-    border-top:1px solid #ddd;
+    border-top:1px solid #dbe5f1;
 
-    line-height:2.1;
+    line-height:2;
 
 }
 
@@ -274,7 +240,7 @@ nav{
 
     overflow:hidden;
 
-    border:1px solid #ddd;
+    border:1px solid #dde6f2;
 
 }
 
@@ -286,7 +252,17 @@ nav{
 
     padding:18px;
 
+    color:#234;
+
 }
+
+.sub-card button:hover{
+
+    background:#e9f3ff;
+
+}
+
+/* ================= SUB CONTENT ================= */
 
 .sub-content{
 
@@ -294,9 +270,11 @@ nav{
 
     padding:18px;
 
-    border-top:1px solid #ddd;
-
     background:white;
+
+    border-top:1px solid #dbe5f1;
+
+    line-height:2;
 
 }
 
@@ -304,292 +282,16 @@ nav{
 
 footer{
 
-    background:#111827;
+    background:#0f172a;
 
     color:white;
 
     text-align:center;
 
-    padding:30px;
+    padding:25px;
 
     margin-top:40px;
 
-    font-size:18px;
+    font-size:17px;
 
 }
-
-</style>
-
-</head>
-
-<body>
-
-<!-- ================= NAVBAR ================= -->
-
-<nav>
-
-<div class="logo">
-M-Comm
-</div>
-
-<div class="menu">
-
-<a href="#">الرئيسية</a>
-<a href="#">العملي</a>
-<a href="#">النظري</a>
-<a href="#">الاختبارات</a>
-
-</div>
-
-</nav>
-
-<!-- ================= HERO ================= -->
-
-<section class="hero">
-
-<h1>اتصالات متنقلة</h1>
-
-<p>
-Mobile Communications
-</p>
-
-<button onclick="window.scrollTo(0,700)">
-ابدأ التصفح
-</button>
-
-</section>
-
-<!-- ================= CONTENT ================= -->
-
-<div class="container">
-
-<h2 class="section-title">
-المحتويات الدراسية
-</h2>
-
-<!-- العملي -->
-
-<div class="card">
-
-<button onclick="toggleContent('practical')">
-📘 العملي
-</button>
-
-<div class="content" id="practical">
-
-<div class="sub-card">
-
-<button onclick="toggleSub('p1')">
-Multiple Access
-</button>
-
-<div class="sub-content" id="p1">
-
-تقنيات تستخدم لمشاركة القناة بين عدة مستخدمين.
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('p2')">
-FDMA
-</button>
-
-<div class="sub-content" id="p2">
-
-تقنية تقسيم التردد بين المستخدمين.
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('p3')">
-TDMA
-</button>
-
-<div class="sub-content" id="p3">
-
-تقنية تعتمد على تقسيم الزمن.
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('p4')">
-CDMA
-</button>
-
-<div class="sub-content" id="p4">
-
-تقنية تعتمد على الأكواد الرقمية.
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('p5')">
-Walsh Codes
-</button>
-
-<div class="sub-content" id="p5">
-
-أكواد تستخدم في CDMA لتقليل التداخل.
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- النظري -->
-
-<div class="card">
-
-<button onclick="toggleContent('theory')">
-📖 النظري
-</button>
-
-<div class="content" id="theory">
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t1')">
-1. أساسيات انتشار الموجات
-</button>
-
-<div class="sub-content" id="t1">
-
-دراسة انتقال الموجات في أنظمة الاتصالات.
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t2')">
-2. فقدان المسار في الفضاء الحر
-</button>
-
-<div class="sub-content" id="t2">
-
-تحليل فقدان الإشارة أثناء انتقالها.
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t3')">
-3. آليات الانتشار الأساسية
-</button>
-
-<div class="sub-content" id="t3">
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t31')">
-الانعكاس وزاوية بروستر
-</button>
-
-<div class="sub-content" id="t31">
-
-Reflection & Brewster Angle
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t32')">
-الانعطاف ومنطقة فرينل
-</button>
-
-<div class="sub-content" id="t32">
-
-Diffraction & Fresnel Zones
-
-</div>
-
-</div>
-
-<div class="sub-card">
-
-<button onclick="toggleSub('t33')">
-التشتت ومعيار رايلي
-</button>
-
-<div class="sub-content" id="t33">
-
-Scattering & Rayleigh Criterion
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-© 2025 M-Comm | Mobile Communications
-
-</footer>
-
-<script>
-
-function toggleContent(id){
-
-let content = document.getElementById(id);
-
-if(content.style.display === "block"){
-
-content.style.display = "none";
-
-}else{
-
-content.style.display = "block";
-
-}
-
-}
-
-function toggleSub(id){
-
-let content = document.getElementById(id);
-
-if(content.style.display === "block"){
-
-content.style.display = "none";
-
-}else{
-
-content.style.display = "block";
-
-}
-
-}
-
-</script>
-
-</body>
-</html>
