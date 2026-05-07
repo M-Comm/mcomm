@@ -22,45 +22,34 @@ body{
     color:#222;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 .hero{
 
-    height:450px;
+    height:420px;
 
     background:
-    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
-    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop');
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
 
     background-size:cover;
-
-    background-position:center center;
-
-    background-repeat:no-repeat;
+    background-position:center;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     flex-direction:column;
 
     text-align:center;
 
     color:white;
-
 }
 
 .hero h1{
 
-    font-size:65px;
+    font-size:60px;
 
     margin-bottom:15px;
-
-    text-shadow:0 0 15px rgba(0,0,0,0.7);
-
-    letter-spacing:2px;
 
 }
 
@@ -68,17 +57,9 @@ body{
 
     font-size:24px;
 
-    background:rgba(255,255,255,0.12);
-
-    padding:12px 24px;
-
-    border-radius:30px;
-
-    backdrop-filter:blur(6px);
-
 }
 
-/* ================= MAIN ================= */
+/* MAIN */
 
 .container{
 
@@ -92,7 +73,7 @@ body{
 
 }
 
-/* ================= MAIN CARDS ================= */
+/* CARD */
 
 .card{
 
@@ -108,7 +89,7 @@ body{
 
 }
 
-/* ================= BUTTON ================= */
+/* BUTTON */
 
 .card button{
 
@@ -140,7 +121,7 @@ body{
 
 }
 
-/* ================= CONTENT ================= */
+/* CONTENT */
 
 .content{
 
@@ -155,8 +136,6 @@ body{
     border-top:1px solid #ddd;
 
 }
-
-/* ================= SUB CARDS ================= */
 
 .sub-card{
 
@@ -182,8 +161,6 @@ body{
 
 }
 
-/* ================= SUB CONTENT ================= */
-
 .sub-content{
 
     display:none;
@@ -198,7 +175,7 @@ body{
 
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
 
@@ -220,7 +197,7 @@ footer{
 
 <body>
 
-<!-- ================= HERO ================= -->
+<!-- HEADER -->
 
 <section class="hero">
 
@@ -230,11 +207,11 @@ footer{
 
 </section>
 
-<!-- ================= CONTENT ================= -->
+<!-- CONTENT -->
 
 <div class="container">
 
-<!-- ================= العملي ================= -->
+<!-- العملي -->
 
 <div class="card">
 
@@ -243,8 +220,6 @@ footer{
 </button>
 
 <div class="content" id="practical">
-
-<!-- Multiple Access -->
 
 <div class="sub-card">
 
@@ -260,8 +235,6 @@ Multiple Access
 
 </div>
 
-<!-- FDMA -->
-
 <div class="sub-card">
 
 <button onclick="toggleSub('p2')">
@@ -275,8 +248,6 @@ FDMA
 </div>
 
 </div>
-
-<!-- TDMA -->
 
 <div class="sub-card">
 
@@ -292,8 +263,6 @@ TDMA
 
 </div>
 
-<!-- CDMA -->
-
 <div class="sub-card">
 
 <button onclick="toggleSub('p4')">
@@ -308,8 +277,6 @@ CDMA
 
 </div>
 
-<!-- Walsh Codes -->
-
 <div class="sub-card">
 
 <button onclick="toggleSub('p5')">
@@ -323,8 +290,6 @@ Walsh Codes
 </div>
 
 </div>
-
-<!-- Quiz -->
 
 <div class="sub-card">
 
@@ -344,7 +309,7 @@ Quiz Questions
 
 </div>
 
-<!-- ================= النظري ================= -->
+<!-- النظري -->
 
 <div class="card">
 
@@ -630,7 +595,7 @@ Solved Numerical Problems
 
 </div>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
