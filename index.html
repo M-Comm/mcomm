@@ -2,182 +2,311 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>M-Comm</title>
+<title>اتصالات متنقلة</title>
 
 <style>
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    margin:0;
     font-family:Tahoma;
-    background:#f4f6f9;
+    background:#f4f7fb;
+    color:#222;
 }
 
-/* Header */
+/* HEADER */
 
-header{
-    background:#0b5ed7;
-    color:white;
-    padding:20px;
+.hero{
+
+    height:400px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
     text-align:center;
+    color:white;
 }
 
-header h1{
-    margin:0;
-    font-size:35px;
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
 }
 
-/* Sections */
+.hero p{
+    font-size:22px;
+}
+
+/* CONTAINER */
 
 .container{
     width:90%;
+    max-width:1000px;
     margin:auto;
     padding:40px 0;
 }
 
+/* CARD */
+
 .card{
+
     background:white;
     margin-bottom:20px;
-    border-radius:15px;
+
+    border-radius:18px;
+
     overflow:hidden;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+    box-shadow:0 0 15px rgba(0,0,0,0.08);
+
 }
 
+/* BUTTON */
+
 .card button{
+
     width:100%;
-    padding:20px;
+    padding:22px;
+
     border:none;
-    background:#ffffff;
-    text-align:right;
+
+    background:white;
+
     font-size:22px;
+
+    text-align:right;
+
     cursor:pointer;
+
     transition:0.3s;
+
+    font-weight:bold;
 }
 
 .card button:hover{
-    background:#e9f1ff;
+
+    background:#edf4ff;
+
 }
+
+/* CONTENT */
 
 .content{
+
     display:none;
-    padding:20px;
+
+    padding:25px;
+
     border-top:1px solid #ddd;
-    line-height:2;
+
+    line-height:2.2;
+
     font-size:18px;
+
+    background:#fafafa;
+
 }
 
-/* Footer */
+.content ul{
+    padding-right:20px;
+}
+
+/* FOOTER */
 
 footer{
-    background:#222;
+
+    background:#111827;
+
     color:white;
+
     text-align:center;
+
     padding:20px;
-    margin-top:30px;
+
+    margin-top:40px;
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+
+<section class="hero">
 
 <h1>اتصالات متنقلة</h1>
 
-<p>Mobile Communications</p>
+<p>
+Mobile Communications
+</p>
 
-</header>
+</section>
+
+<!-- CONTENT -->
 
 <div class="container">
 
-<!-- Multiple Access -->
+<!-- العملي -->
 
 <div class="card">
-<button onclick="toggleContent('c1')">
-Multiple Access
+
+<button onclick="toggleContent('practical')">
+العملي
 </button>
 
-<div class="content" id="c1">
+<div class="content" id="practical">
 
-تقنيات تستخدم لمشاركة القناة بين عدة مستخدمين في أنظمة الاتصالات.
+<ul>
+
+<li>Multiple Access</li>
+
+<li>FDMA</li>
+
+<li>TDMA</li>
+
+<li>CDMA</li>
+
+<li>Walsh Codes</li>
+
+<li>Quiz Questions</li>
+
+</ul>
 
 </div>
+
 </div>
 
-<!-- FDMA -->
+<!-- النظري -->
 
 <div class="card">
-<button onclick="toggleContent('c2')">
-FDMA
+
+<button onclick="toggleContent('theory')">
+النظري
 </button>
 
-<div class="content" id="c2">
+<div class="content" id="theory">
 
-تقنية تقسيم التردد حيث يحصل كل مستخدم على تردد مختلف.
+<ul>
+
+<li>
+أساسيات انتشار الموجات
+(Mobile Radio Propagation)
+</li>
+
+<li>
+فقدان المسار في الفضاء الحر
+(Free Space Path Loss)
+</li>
+
+<li>
+
+آليات الانتشار الأساسية
+(Propagation Mechanisms)
+
+<ul>
+
+<li>
+الانعكاس وزاوية بروستر
+(Reflection & Brewster Angle)
+</li>
+
+<li>
+الانعطاف ومنطقة فرينل
+(Diffraction & Fresnel Zones)
+</li>
+
+<li>
+التشتت ومعيار رايلي
+(Scattering & Rayleigh Criterion)
+</li>
+
+</ul>
+
+</li>
+
+<li>
+نموذج الانعكاس الأرضي
+(Two-Ray Ground Model)
+</li>
+
+<li>
+
+تقنيات الوصول المتعدد
+(Multiple Access Techniques)
+
+<ul>
+
+<li>
+نظام الوصول بالتردد
+(FDMA)
+</li>
+
+<li>
+نظام الوصول بالزمن
+(TDMA)
+</li>
+
+<li>
+نظام الوصول بالكود
+(CDMA)
+</li>
+
+</ul>
+
+</li>
+
+<li>
+
+بنك الأسئلة والتدريبات
+(Question Bank)
+
+<ul>
+
+<li>
+اختبار الخيارات المتعددة
+(MCQs)
+</li>
+
+<li>
+تحدي صح أو خطأ
+</li>
+
+<li>
+مسائل حسابية محلولة
+</li>
+
+</ul>
+
+</li>
+
+</ul>
 
 </div>
-</div>
 
-<!-- TDMA -->
-
-<div class="card">
-<button onclick="toggleContent('c3')">
-TDMA
-</button>
-
-<div class="content" id="c3">
-
-تقنية تقسيم الزمن حيث يتم تخصيص وقت محدد لكل مستخدم.
-
-</div>
-</div>
-
-<!-- CDMA -->
-
-<div class="card">
-<button onclick="toggleContent('c4')">
-CDMA
-</button>
-
-<div class="content" id="c4">
-
-تقنية تعتمد على أكواد خاصة لكل مستخدم لإرسال البيانات.
-
-</div>
-</div>
-
-<!-- Walsh Codes -->
-
-<div class="card">
-<button onclick="toggleContent('c5')">
-Walsh Codes
-</button>
-
-<div class="content" id="c5">
-
-أكواد تستخدم في CDMA لفصل الإشارات وتقليل التداخل.
-
-</div>
-</div>
-
-<!-- Quiz Questions -->
-
-<div class="card">
-<button onclick="toggleContent('c6')">
-Quiz Questions
-</button>
-
-<div class="content" id="c6">
-
-هنا ستتم إضافة أسئلة اختبار خاصة بالمادة.
-
-</div>
 </div>
 
 </div>
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -192,9 +321,13 @@ function toggleContent(id){
 let content = document.getElementById(id);
 
 if(content.style.display === "block"){
+
     content.style.display = "none";
+
 }else{
+
     content.style.display = "block";
+
 }
 
 }
